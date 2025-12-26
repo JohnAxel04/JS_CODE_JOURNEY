@@ -6,17 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="h1">Welcome</h1>
-    <label>Username</label>
-    <input id="line" type="text"><br><br>
-    <button id="btn">Submit </button>
     <script>
-        let username;
+        let x = `Pizza`;
+        let y = `Pizza`;
+        let z = `Pizza`;
 
-        document.getElementById('btn').onclick = function(){
-        username = document.getElementById('line').value;
-        document.getElementById('h1').textContent = (`Welcome ${username}`);
-        }
+        x = Number(x);
+        y = String(y);
+        z = Boolean(z);
+
+        console.log(x, typeof x)
+        console.log(y, typeof y)
+        console.log(z, typeof z)
     </script>
 </body>
 </html>
