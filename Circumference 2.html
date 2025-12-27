@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH1">Enter the Radius of a Circle</h1>
+    <label >Radius: </label>
+    <input id="lbl" type="text">
+    <button id="btn">Submit</button>
+    <h3 id="myH3"></h3>
+    <script>
+        const PI = 3.14159;
+        let radius;
+        let circumference;
+
+        document.getElementById("btn").onclick = function(){
+            radius = document.getElementById("lbl").value;
+            radius = Number(radius);
+            circumference = 2 * radius * PI;
+            document.getElementById("myH3").textContent = circumference + (`cm`);
+        }
+    </script>
+</body>
+</html>
