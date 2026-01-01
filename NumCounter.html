@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="lbl">0</label>
+    <div id="btnContainer">
+        <button id="dBtn" class="btn">Decrease</button>
+        <button id="rBtn" class="btn">Reset</button>
+        <button id="iBtn" class="btn">Increase</button>
+    </div>
+    <style>
+        #lbl{
+            display: flex;
+            justify-content: center;
+            font-size: 10em;
+        }
+        #btnContainer{
+            display: flex;
+            justify-content: center;
+            gap: .5em;
+        }
+        .btn{
+            width: 10em;
+            height: 5vh;
+            background-color: grey;
+            transition: background-color .5s;
+            border-radius: 5px;
+            color: white;
+        }
+        .btn:hover{
+            background-color: darkslategrey;
+        }
+    </style>
+    <script>
+        const Dbtn = document.getElementById('dBtn');
+        const Rbtn = document.getElementById('rBtn');
+        const Ibtn = document.getElementById('iBtn');
+        const Lbl = document.getElementById('lbl')
+        let count = 0;
+
+        Dbtn.onclick = function(){
+            count--;
+            Lbl.textContent = count;
+        }
+        Rbtn.onclick = function(){
+            count = 0;
+            Lbl.textContent = count;
+        }
+        Ibtn.onclick = function(){
+            count++;
+            Lbl.textContent = count;
+        }
+    </script>
+</body>
+</html>
