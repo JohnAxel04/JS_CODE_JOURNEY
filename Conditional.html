@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin: 10px;
+        }
+        button{
+            margin: 0px 10px 10px;
+        }
+        span{
+            font-size: 2rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Enter Your Age:</h1>
+    <input type="text" id="input"><br>
+    <button id="submit">submit</button><br>
+    <span id="text"></span>
+
+
+    <script>
+        const input = document.getElementById("input");
+        const submit = document.getElementById("submit");
+        const text = document.getElementById("text");
+        let age;
+
+        submit.onclick = function(){
+
+            age = input.value;
+            age = Number(age);
+
+            if(age >= 101){
+                text.textContent = `Youre age too old to enter`;
+            }
+            else if(age <= 0){
+                text.textContent = `Youre just born cant enter`;
+            }
+            else if(age <= 17){
+                text.textContent = `Youre age is too young to enter`;
+            }
+            else if(age >= 18){
+                text.textContent = `Youre age is qualified you can enter`;
+            }
+            else{
+                text.textContent = `error`;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
