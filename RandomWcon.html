@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 id="title"></h1>
+
+
+    <script>
+        let min = 1;
+        let max = 10;
+        let attemp = 0;
+        random = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(random);
+        let yes = true;
+        let guess;
+
+        while(yes){
+            guess = window.prompt(`Choose a random number between ${min} and ${max}`);
+            guess = Number(guess);
+            if(guess == NaN){
+                window.alert(`Invalid Input Try Again`);
+            }
+            else if(guess < min || guess > max){
+                window.alert(`Invalid Input Try Again`);
+            }
+            else{
+                attemp++;
+                if(guess < random){
+                    window.alert(`Too low try again`);
+                }
+                else if(guess > random){
+                    window.alert(`Too high try again`);
+                }
+                else{
+                    window.alert(`Good job you guess the correct number ${random} with ${attemp} attempt`);
+                    yes = false;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
